@@ -4,3 +4,7 @@
 </article>
 <hr>
 <small>Created at <%= @article.created_at %></small>
+<hr>
+<%= link_to 'Edit', edit_article_path(@article) %>
+<%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm:"Are you sure?"} %>
+<%= link_to 'Return to listing', articles_path %>
