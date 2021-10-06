@@ -1,6 +1,13 @@
-<h2>Create new Article</h2>
-<hr>
-<%= render 'form' %>
-<p>
-    <%= link_to 'Return to listing', articles_path %>
-</p>
+<h2 class="text-center">Create new Article</h2>
+
+<div class="card m-4 shadow-sm mb-5">
+    
+    <div class="card-body pt-5 pb-5">
+        
+        <%= render 'form' %>
+        
+    </div>
+    <div class="card-footer text-center text-muted">
+        <%= link_to 'Return to listing', articles_path %>
+    </div>
+</div>

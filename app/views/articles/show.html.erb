@@ -1,28 +1,22 @@
-<div id="page-content" class="pt-5">
-    <div class="container pb-5">
-        <div class="card text-center m-4 shadow-sm mb-5">
-            <div class="card-header font-italic">
-                By Dheeraj
-            </div>
-            <div class="card-body">
-                
-                <h5 class="card-title"><%= @article.title  %></h5>
-                <picture>
-                    <img src="https://picsum.photos/1200/500" style="width:100%" height="500">
-                </picture>
-                <article class="text-justify"><%= @article.description %></article>
-                <hr>
-                <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
-                <%= link_to "Delete", article_path(@article), method: :delete, class: "btn btn-outline-danger", data: {confirm: "Are you sure?"} %>
-                
-            </div>
-            <div class="card-footer text-muted">
-                <small>Created <%= time_ago_in_words(@article.created_at);%> ago,</small>
-                <small>Edited <%= time_ago_in_words(@article.updated_at);%> ago</small>
-            </div>
-        </div>
-        <div class="text-center">Back to <%= link_to "All articles", articles_path %></div>
+<div class="card text-center m-4 shadow-sm mb-5">
+    <div class="card-header font-italic">
+        By Dheeraj
+    </div>
+    <div class="card-body">
+        
+        <h5 class="card-title"><%= @article.title  %></h5>
+        <picture>
+            <img src="https://picsum.photos/1200/500" style="width:100%" height="500">
+        </picture>
+        <article class="text-justify"><%= @article.description %></article>
+        <hr>
+        <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
+        <%= link_to "Delete", article_path(@article), method: :delete, class: "btn btn-outline-danger", data: {confirm: "Are you sure?"} %>
+        
+    </div>
+    <div class="card-footer text-muted">
+        <small>Created <%= time_ago_in_words(@article.created_at);%> ago,</small>
+        <small>Edited <%= time_ago_in_words(@article.updated_at);%> ago</small>
     </div>
 </div>
-
-
+<div class="text-center">Back to <%= link_to "All articles", articles_path %></div>
