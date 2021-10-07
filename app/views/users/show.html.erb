@@ -1,0 +1,9 @@
+<h1 class="text-center"><%= @user.username %>'s Profile</h1>
+
+<%= gravatar_for @user, size: 150%>
+
+<hr>
+<div class="clearfix"></div>
+<h2 class="text-center">Articles</h2>
+
+<%= render 'articles/articles' %>
