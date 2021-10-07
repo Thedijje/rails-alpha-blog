@@ -2,9 +2,9 @@
 
     <div class="card-body">
         <p class="text-center">Please provide following detail for signup</p>
-        <%=render 'shared/errors', obj: @users %>
+        <%=render 'shared/errors', obj: @user %>
         <hr>
-        <%= form_with(model: @users, local: true, class: "text-left") do |f|%>
+        <%= form_with(model: @user, local: true, class: "text-left") do |f|%>
 
             <div class="form-group">
                 <%= f.label :username %>
@@ -22,7 +22,7 @@
             </div>
 
             <div class="form-group text-center">
-                <%= f.submit "Signup", class: "btn btn-primary" %>
+                <%= f.submit(@user.new_record? ? "Signup" : "Update account", class: "btn btn-primary" ) %>
             </div>
 
         <% end %>
