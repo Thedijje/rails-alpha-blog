@@ -1,7 +1,9 @@
 <h1 class="text-center"><%= @user.username %>'s Profile</h1>
 
 <%= gravatar_for @user, size: 150%>
-
+<p class="text-center mt-3">
+    <%= link_to "Edit user", edit_user_path(@user), class: "btn btn-outline-primary"%>
+</p>
 <hr>
 <div class="clearfix"></div>
 <h2 class="text-center">Articles</h2>
