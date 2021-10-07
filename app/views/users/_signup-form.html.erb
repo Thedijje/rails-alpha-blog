@@ -1,0 +1,34 @@
+<div class="card text-center m-4 shadow-sm mb-5 pt-3">
+
+    <div class="card-body">
+        <p class="text-center">Please provide following detail for signup</p>
+        <%=render 'shared/errors', obj: @user %>
+        <hr>
+        <%= form_with(model: @user, local: true, class: "text-left") do |f|%>
+
+            <div class="form-group">
+                <%= f.label :username %>
+                <%= f.text_field :username, class: "form-control", placeholder: "Enter username" %>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :Email%>
+                <%= f.email_field :email, class: "form-control", placeholder: "Enter your email address" %>
+            </div>
+
+            <div class="form-group">
+                <%= f.label :password%>
+                <%= f.password_field :password, class: "form-control", placeholder: "Enter Password" %>
+            </div>
+
+            <div class="form-group text-center">
+                <%= f.submit(@user.new_record? ? "Signup" : "Update account", class: "btn btn-primary" ) %>
+            </div>
+
+        <% end %>
+        <p>Already have account? <%= link_to "Login", "/login" %></p>
+    </div>
+
+    
+
+</div>
